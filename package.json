@@ -1,0 +1,38 @@
+{
+    "name": "hexo-shiki-highlighter",
+    "version": "0.0.1",
+    "description": "A hexo plugin to use Shiki 式 as code block highlighter",
+    "main": "dist/lib.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "node ./build.mjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ArcticLampyrid/hexo-shiki-highlighter.git"
+    },
+    "keywords": [
+        "shiki",
+        "hexo",
+        "highlight",
+        "highlighter"
+    ],
+    "author": "ArcticLampyrid <arcticlampyrid@outlook.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ArcticLampyrid/hexo-shiki-highlighter/issues"
+    },
+    "homepage": "https://github.com/ArcticLampyrid/hexo-shiki-highlighter#readme",
+    "devDependencies": {
+        "esbuild": "^0.23.0",
+        "hastscript": "^9.0.0",
+        "hast-util-from-html": "^2.0.1",
+        "hexo-util": "^3.3.0",
+        "shiki": "^1.12.0"
+    },
+    "peerDependencies": {
+        "hexo": "^7.0.0"
+    }
+}
