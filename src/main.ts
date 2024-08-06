@@ -1,6 +1,6 @@
 import { bundledLanguages, createHighlighter } from "shiki";
 import { h } from 'hastscript'
-import { escapeHTML } from "hexo-util";
+import { escapeHTML, stripIndent } from "hexo-util";
 import Hexo from "hexo";
 import { HighlightOptions } from "hexo/dist/extend/syntax_highlight";
 import { fromHtml } from 'hast-util-from-html'
@@ -9,6 +9,7 @@ export async function init(hexo: Hexo) {
     const config = Object.assign(
         {
             theme: "dark-plus",
+            strip_indent: true,
         },
         hexo.config.shiki || {}
     );
@@ -29,6 +30,7 @@ export async function init(hexo: Hexo) {
     });
     const hexoHighlighter = (code: string, options: HighlightOptions) => {
         try {
+            var code = config.strip_indent ? stripIndent(code) as string : code;
             var lang = options.lang;
             if (!lang || !supportedLanguages[lang]) {
                 lang = "text";

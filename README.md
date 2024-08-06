@@ -29,6 +29,7 @@ Finally, configure the options for shiki in your `_config.yml`.
 ```yaml
 shiki:
   theme: "dark-plus"
+  strip_indent: true # Strip the leading indent of the code block (default: true, just like the official highlighter)
 ```
 
 ## Usage
