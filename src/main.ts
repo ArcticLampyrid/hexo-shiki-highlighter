@@ -34,12 +34,10 @@ export async function init(hexo: Hexo) {
     }
 
     // Check if all themes are supported
-    const supportedThemes = highlighter.getLoadedThemes().reduce((acc, theme) => {
-        acc[theme] = true;
-        return acc;
-    });
-    if (themes.some(theme => !supportedThemes[theme])) {
-        console.error(`Some themes are not supported: ${themes.filter(theme => !supportedThemes[theme]).join(", ")}`);
+    for (const theme of themes) {
+        if (!highlighter.getLoadedThemes().includes(theme)) {
+            throw new Error(`Theme "${theme}" is not supported.`);
+        }
     }
 
     // Load custom languages

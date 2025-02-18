@@ -1,6 +1,6 @@
 {
     "name": "hexo-shiki-highlighter",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "A hexo plugin to use Shiki 式 as code block highlighter",
     "main": "dist/lib.js",
     "files": [
