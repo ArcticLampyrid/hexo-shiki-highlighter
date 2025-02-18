@@ -26,11 +26,11 @@
     },
     "homepage": "https://github.com/ArcticLampyrid/hexo-shiki-highlighter#readme",
     "devDependencies": {
-        "esbuild": "^0.23.0",
+        "esbuild": "^0.25.0",
         "hastscript": "^9.0.0",
-        "hast-util-from-html": "^2.0.1",
+        "hast-util-from-html": "^2.0.3",
         "hexo-util": "^3.3.0",
-        "shiki": "^1.12.0"
+        "shiki": "^3.0.0"
     },
     "peerDependencies": {
         "hexo": "^7.0.0"
